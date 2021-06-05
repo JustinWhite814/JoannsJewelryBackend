@@ -2,7 +2,7 @@ const mongoose = require('../db/connection')
 
 const UserSchema = new mongoose.Schema(
   {
-    firstname: {
+    firstName: {
       type:String,
       required: true
     },
