@@ -10,11 +10,18 @@ router.get("/", (req, res, next) => {
     .catch(next);
 });
 
+router.get("/:category", (req, res, next)=> {
+ Jewel.find({ category : req.params.category})
+      .then((result) => res.json(result))
+      .catch(next);  
+})
+
 router.get("/:id", (req, res, next) => {
   Jewel.findById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
+
 
 // these will not
 // {
