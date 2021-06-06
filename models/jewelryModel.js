@@ -3,8 +3,8 @@ const mongoose = require('../db/connection')
 const JewelrySchema = new mongoose.Schema({
   title:{type:String, required: true},
   price:{type:Number},
-  description:{type: String},
   category:{type: String},
+  availability:{type: String},
   image:{type: String}
 })
 
