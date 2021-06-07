@@ -46,7 +46,6 @@
   "image": "https://images.jewelers.services/qgrepo/10BC94.JPG?w=225&h=225"
   },
   
-  
   {
   "title": "Diamond-Cut Open Franco Chain",
   "price": 567.75,
@@ -388,7 +387,7 @@
   {
   "title": "Box Chain",
   "price": 47.12,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QBX024.JPG?w=225&h=225"
   },
@@ -397,7 +396,7 @@
   {
   "title": "Cable Chain",
   "price": 16.72,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QCL025.JPG?w=225&h=225"
   },
@@ -407,7 +406,7 @@
   {
   "title": "Diamond-Cut Cable Chain",
   "price": 73.98,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/10PE145.JPG?w=225&h=225"
   },
@@ -416,7 +415,7 @@
   {
   "title": "Diamond-Cut Rope Chain",
   "price": 1456.50,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "Out of Stock",
   "image" : "https://images.jewelers.services/qgrepo/018L.JPG?w=225&h=225"
   },
@@ -425,7 +424,7 @@
   {
   "title": "Round Spiga Chain",
   "price": 74.40,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QSP050.JPG?w=225&h=225"
   },
@@ -433,7 +432,7 @@
   {
   "title": "Singapore Chain",
   "price": 26.44,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QFC98.JPG?w=225&h=225"
   },
@@ -441,7 +440,7 @@
   {
   "title": "Figaro Chain",
   "price": 14.20,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QFG050-8.jpg?w=225&h=225"
   },
@@ -450,7 +449,7 @@
   {
   "title": "Open Elongated Link Curb Chain",
   "price": 15.48,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QPE42.JPG?w=225&h=225"
   },
@@ -458,7 +457,7 @@
   {
   "title": "Beveled Oval Cable Chain",
   "price": 61.36,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QCA060.JPG?w=225&h=225"
   },
@@ -466,7 +465,7 @@
   {
   "title": "Curb Chain",
   "price": 13.62,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QPE10.JPG?w=225&h=225"
   },
@@ -475,7 +474,7 @@
   {
   "title": "Round Box Chain",
   "price": 24.32,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QHX019.JPG?w=225&h=225"
   },
@@ -483,7 +482,7 @@
   {
   "title": "Light Concave Figaro Chain",
   "price": 1582.80,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/10LF140.JPG?w=225&h=225"
   },
@@ -491,7 +490,7 @@
   {
   "title": "Flat Figaro Chain",
   "price": 356.61,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/WFIG060-7.jpg?w=225&h=225"
   },
@@ -499,7 +498,7 @@
   {
   "title": "Snake Chain",
   "price": 70.08,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QSN045.JPG?w=225&h=225"
   },
@@ -507,7 +506,7 @@
   {
   "title": "Semi-Solid Curb Link Chain",
   "price": 119.13,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/10BC124-7.jpg?w=225&h=225"
   },
@@ -515,7 +514,7 @@
   {
   "title": "Semi-Solid Figaro Chain",
   "price": 604.26,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/10BC94.JPG?w=225&h=225"
   },
@@ -523,7 +522,7 @@
   {
   "title": "Semi-Solid Diamond-Cut Rope Chain",
   "price": 392.19,
-  "category": "bracelet",
+  "category": "bracelets",
   "// availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/DH014.jpg?w=225&h=225"
   },
@@ -531,7 +530,7 @@
   {
   "title": "Twisted Box Chain",
   "price": 32.12,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability" : "Out of Stock",
   "image": "https://images.jewelers.services/qgrepo/QPE26.JPG?w=225&h=225"
   },
@@ -540,7 +539,7 @@
   {
   "title": "Oval Fancy Rolo Chain",
   "price": 161.12,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QFC87.JPG?w=225&h=225"
   },
@@ -548,7 +547,7 @@
   {
   "title": "Semi Solid Anchor Chain",
   "price": 706.71,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/10BC100.JPG?w=225&h=225"
   },
@@ -557,14 +556,14 @@
   {
   "title": "Beveled Curb Chain",
   "price": 122.00,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/QFB080.JPG?w=225&h=225"
   },
   {
   "title": "Sterling Silver Fancy Bracelet",
   "price": 47.16,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "Out of Stock",
   "image": "https://images.jewelers.services/qgrepo/QG2297-7.5.jpg?w=225&h=225"
   },
@@ -572,7 +571,7 @@
   {
   "title": "14K Rose Gold Box Chain",
   "price": 309.99,
-  "category": "bracelet",
+  "category": "bracelets",
   "availability": "In Stock",
   "image": "https://images.jewelers.services/qgrepo/RSC1.JPG?w=225&h=225"
   }
