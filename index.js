@@ -1,14 +1,36 @@
 const express = require("express");
 const methodOverride = require("method-override");
 const cors = require('cors')
+const mongoose = require('mongoose')
+const passport = require('passport')
+const passportlocal = require('passport-local').Strategy
+const bcrypt = require('bcryptjs')
+const session = require('express-session')
+const bodyParser = require('body-parser')
 const userRouter = require("./controllers/userRouter");
 const jewelRouter = require("./controllers/jewelryRouter");
+const cookieParser = require("cookie-parser");
+const User = require('./models/userModel')
 const app = express();
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.use(cors())
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}))
+app.use(session({
+  secret: 'secretcode',
+  resave: true,
+  saveUninitialized: true
+}))
+app.use(cookieParser('secretcode'))
+app.use(passport.initialize())
+app.use(passport.session())
+require('./passportConfig')(passport)
 
 
 app.get('/', (req, res) => {
@@ -16,7 +38,43 @@ app.get('/', (req, res) => {
   // res.redirect('/users/')
 })
 
-app.use("/users/", userRouter);
+app.post('/login', (req,res, next) => {
+passport.authenticate('local', (err,user,info)=>{
+  if(err) throw err;
+  if(!user) res.send('No user Exists')
+  else {
+    req.logIn(user, err =>{
+      if(err) throw err;
+      res.send('Successfully Authenticated')
+    })
+  }
+})(req, res, next)
+})
+
+app.post('/register', (req, res)=> {
+  User.findOne({username: req.body.username}, async (err, doc)=>{
+    if(err) throw err;
+    if(doc) res.send("user already exists")
+    if(!doc){
+      const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        const newUser = new User({
+        firstName: req.body.firstname,
+        lastName: req.body.lastName,
+        username: req.body.username,
+        password: hashedPassword,
+      })
+      await newUser.save()
+      res.send('User Created')
+    }
+   })
+  console.log(req.body)
+})
+
+
+app.get('/user', (req, res)=> {
+  res.send(req.user)
+})
+// app.use("/users/", userRouter);
 app.use("/jewels/", jewelRouter);
 
 app.use((err, req, res, next) => {
@@ -27,6 +85,7 @@ app.use((err, req, res, next) => {
 
 
 app.set('port', process.env.PORT || 4000);
+
 app.listen(app.get('port'), () => {
   console.log(`Project 3 HOSTED on ${app.get('port')}`);
 });
