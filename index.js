@@ -33,22 +33,24 @@ app.use(passport.session())
 require('./passportConfig')(passport)
 
 
-app.get('/', (req, res) => {
-  res.send('Home')
-  // res.redirect('/users/')
-})
+// app.get('/', (req, res) => {
+//   res.send('Home')
+//   // res.redirect('/users/')
+// })
 
 app.post('/login', (req,res, next) => {
 passport.authenticate('local', (err,user,info)=>{
   if(err) throw err;
-  if(!user) res.send('No user Exists')
+  if(!user) {
+    res.send('No user Exists')
+  }
   else {
     req.logIn(user, err =>{
       if(err) throw err;
       res.send('Successfully Authenticated')
     })
   }
-})(req, res, next)
+})(req,res,next)
 })
 
 app.post('/register', (req, res)=> {
@@ -71,10 +73,10 @@ app.post('/register', (req, res)=> {
 })
 
 
-app.get('/user', (req, res)=> {
-  res.send(req.user)
-})
-// app.use("/users/", userRouter);
+// app.get('/user', (req, res)=> {
+//   User.findOne{}
+// })
+app.use("/users/", userRouter);
 app.use("/jewels/", jewelRouter);
 
 app.use((err, req, res, next) => {
