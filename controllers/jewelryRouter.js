@@ -25,25 +25,25 @@ router.get("/:id", (req, res, next) => {
 
 // these will not
 // {
-router.post("/", (req, res, next) => {
-  Jewel.create(req.body)
-  .then(createResponse => Post.find({}))
-  .then(posts => res.json(posts))
-  .catch(next);
-});
+// router.post("/", (req, res, next) => {
+//   Jewel.create(req.body)
+//   .then(createResponse => Post.find({}))
+//   .then(posts => res.json(posts))
+//   .catch(next);
+// });
 
-router.put("/:id", (req, res, next) => {
-  Jewel.findOneAndUpdate({ _id: req.params.id }, req.body)
-  .then(editResponse => Post.find({}))
-  .then(posts => res.json(posts))
-  .catch(next);
-});
+// router.put("/:id", (req, res, next) => {
+//   Jewel.findOneAndUpdate({ _id: req.params.id }, req.body)
+//   .then(editResponse => Post.find({}))
+//   .then(posts => res.json(posts))
+//   .catch(next);
+// });
 
-router.delete("/:id", (req, res, next) => {
-  Jewel.findOneAndDelete({ _id: req.params.id })
-  .then(deleteResponse => Post.find({}))
-  .then(posts => res.json(posts))
-  .catch(next);
-});
+// router.delete("/:id", (req, res, next) => {
+//   Jewel.findOneAndDelete({ _id: req.params.id })
+//   .then(deleteResponse => Post.find({}))
+//   .then(posts => res.json(posts))
+//   .catch(next);
+// });
 // }
 module.exports = router
