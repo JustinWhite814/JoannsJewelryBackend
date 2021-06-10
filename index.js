@@ -12,7 +12,7 @@ const jewelRouter = require("./controllers/jewelryRouter");
 const cookieParser = require("cookie-parser");
 const User = require('./models/userModel')
 const app = express();
-
+// |----------------------------------------- Middle Ware -----------------------------------------|
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
@@ -31,12 +31,13 @@ app.use(cookieParser('secretcode'))
 app.use(passport.initialize())
 app.use(passport.session())
 require('./passportConfig')(passport)
+// |---------------------------------------- Middle Ware ----------------------------------------|
 
 
-// app.get('/', (req, res) => {
-//   res.send('Home')
-//   // res.redirect('/users/')
-// })
+// |---------------------------------------- Registration Routes ----------------------------------------|
+app.get('/', (req, res) => {
+  res.send(`Welcome to the backend I think you're in the wrong place`)
+})
 
 app.post('/login', (req,res, next) => {
 passport.authenticate('local', (err,user,info)=>{
@@ -71,14 +72,11 @@ app.post('/register', (req, res)=> {
    })
   console.log(req.body)
 })
+// |---------------------------------------- Registration Routes ----------------------------------------|
 
 
-// app.get('/user', (req, res)=> {
-//   User.findOne{}
-// })
 app.use("/users/", userRouter);
 app.use("/jewels/", jewelRouter);
-
 app.use((err, req, res, next) => {
   const statusCode = res.statusCode || 500;
   const message = err.message || 'Internal Server Error';
