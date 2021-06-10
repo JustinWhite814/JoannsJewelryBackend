@@ -38,6 +38,14 @@ require('./passportConfig')(passport)
 app.get('/', (req, res) => {
   res.send(`Welcome to the backend I think you're in the wrong place`)
 })
+app.get('/user', (req,res, next) =>{
+  User.find({})
+  .then((result) => res.json(result))
+  .catch(next);
+})
+
+
+
 
 app.post('/login', (req,res, next) => {
 passport.authenticate('local', (err,user,info)=>{
@@ -53,6 +61,21 @@ passport.authenticate('local', (err,user,info)=>{
   }
 })(req,res,next)
 })
+app.get("/user/:username", (req, res, next) => {
+  User.findOne({ username: req.params.username })
+    .then((result) => res.json(result))
+    .catch(next);
+});
+
+// Update: Update a User's information
+app.put("/user/:id", (req, res, next) => {
+  User.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true,
+  })
+    .then((result) => res.json(result))
+    .catch(next);
+});
+
 
 app.post('/register', (req, res)=> {
   User.findOne({username: req.body.username}, async (err, doc)=>{
@@ -75,7 +98,7 @@ app.post('/register', (req, res)=> {
 // |---------------------------------------- Registration Routes ----------------------------------------|
 
 
-app.use("/users/", userRouter);
+// app.use("/user", userRouter);
 app.use("/jewels/", jewelRouter);
 app.use((err, req, res, next) => {
   const statusCode = res.statusCode || 500;
