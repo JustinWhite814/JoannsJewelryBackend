@@ -61,6 +61,7 @@ passport.authenticate('local', (err,user,info)=>{
   }
 })(req,res,next)
 })
+
 app.get("/user/:username", (req, res, next) => {
   User.findOne({ username: req.params.username })
     .then((result) => res.json(result))
