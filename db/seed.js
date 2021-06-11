@@ -13,7 +13,7 @@ User.deleteMany({})
     process.exit();
   });
 
-  Jewel.deleteMany({})
+Jewel.deleteMany({})
   .then(() => {
     return Jewel.insertMany(jewels);
   })

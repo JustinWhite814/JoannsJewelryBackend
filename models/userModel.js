@@ -1,24 +1,26 @@
 const mongoose = require('../db/connection')
+const { Schema } = mongoose
+mongoose.Promise = global.Promise;
 
-const UserSchema = new mongoose.Schema(
+const UserSchema = new Schema(
   {
-    firstname: {
+    firstName: {
       type:String,
-      required: true
+      trim: true
     },
     lastName: {
       type: String,
-      required: true
+      trim: true
     },
     username: {
       type: String,
-      required: true
+      trim: true
     },
-    password: {type: String,
-    required: true
-    }
-  },
-  {timestamp: true}
+    password: {
+      type: String,
+      trim: true
+  }
+  }
 )
 
 const User = mongoose.model('User', UserSchema);
