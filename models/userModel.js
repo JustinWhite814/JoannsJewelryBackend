@@ -1,8 +1,7 @@
 const mongoose = require('../db/connection')
-const { Schema } = mongoose
-mongoose.Promise = global.Promise;
 
-const UserSchema = new Schema(
+
+const UserSchema = new mongoose.Schema(
   {
     firstName: {
       type:String,
@@ -19,10 +18,14 @@ const UserSchema = new Schema(
     password: {
       type: String,
       trim: true
-  }
+    },
+    email: {
+      type:String,
+      trim: true
+    }
   }
 )
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model("User", UserSchema)
 
 module.exports = User;
