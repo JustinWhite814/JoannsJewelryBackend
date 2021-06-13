@@ -18,7 +18,11 @@ const UserSchema = new mongoose.Schema(
     password: {
       type: String,
       trim: true
-  }
+    },
+    email: {
+      type:String,
+      trim: true
+    }
   }
 )
 
