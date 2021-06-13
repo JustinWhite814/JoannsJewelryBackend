@@ -2,5 +2,6 @@
   "firstName": "Mike",
   "lastName": "Rod",
   "username": "Mrod1",
-  "password": "Boss"
+  "password": "Boss",
+  "email": "faker@fakemail.com"
 }]
