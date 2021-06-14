@@ -97,6 +97,14 @@ app.post('/register', (req, res)=> {
    })
   console.log(req.body)
 })
+
+// Under Construction: 
+
+// app.delete("/user/:username", (req, res, next) => {
+//   User.findOneAndDelete({ username: req.params.username })
+//     .then((result) => res.json(result))
+//     .catch(next);
+// })
 // |---------------------------------------- Registration Routes ----------------------------------------|
 
 
