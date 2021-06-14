@@ -1,6 +1,4 @@
 const mongoose = require('../db/connection')
-
-
 const UserSchema = new mongoose.Schema(
   {
     firstName: {
