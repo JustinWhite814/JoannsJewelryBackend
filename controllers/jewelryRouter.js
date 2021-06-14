@@ -27,8 +27,8 @@ router.get("/:id", (req, res, next) => {
 // {
 // router.post("/", (req, res, next) => {
 //   Jewel.create(req.body)
-//   .then(createResponse => Post.find({}))
-//   .then(posts => res.json(posts))
+//   .then(createResponse => Jewel.find({}))
+//   .then(jewels => res.json(jewels))
 //   .catch(next);
 // });
 
