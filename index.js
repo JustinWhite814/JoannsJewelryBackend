@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(cors({
-  origin: 'https://joans-jewelry.herokuapp.com',
-  // origin: 'http://localhost:3000',
+  // origin: 'https://joans-jewelry.herokuapp.com',
+  origin: 'http://localhost:3000',
   credentials: true
 }))
 app.use(session({
